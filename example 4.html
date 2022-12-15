@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function myFunction(){
+            var x = document.getElementById("form1")
+            var text = "";
+            var i;
+            for (i = 0; i < x.length; i++){
+                data = x.elements[i].value;
+                window.alert(data + ", click on the button")
+                if (data != "Submit"){
+                    text += "The name entered is " + data + ".";
+                }
+                document.getElementById("output_text").innerHTML = text;
+            }
+        }
+    </script>
+</head>
+<body>
+    <form id="form1" action="">
+        <label for="firstname">Firstname:</label>
+        <input type="text" id="firstname" name="firstname">
+    </form>
+    <button onclick="myFunction()" name="Submit" value="Submit">Submit </button>
+    <p id = "output_text"> </p>
+</body>
+</html>
